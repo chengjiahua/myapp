@@ -82,3 +82,104 @@ h2 {
   color: #2c3e50;
   margin-bottom: 20px;
 }
+
+/* 在App.css中添加 */
+.game-2048 .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background: #bbada0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  background: rgba(238, 228, 218, 0.35);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.15s;
+}
+
+.tile.active {
+  background: #eee4da;
+}
+
+.value-2 { background: #eee4da; color: #776e65; }
+.value-4 { background: #ede0c8; color: #776e65; }
+.value-8 { background: #f2b179; color: white; }
+.value-16 { background: #f59563; color: white; }
+.value-32 { background: #f67c5f; color: white; }
+.value-64 { background: #f65e3b; color: white; }
+.value-128 { background: #edcf72; color: white; font-size: 20px; }
+.value-256 { background: #edcc61; color: white; font-size: 20px; }
+.value-512 { background: #edc850; color: white; font-size: 20px; }
+.value-1024 { background: #edc53f; color: white; font-size: 18px; }
+.value-2048 { background: #edc22e; color: white; font-size: 18px; }
+
+.game-over {
+  position: absolute;
+  background: rgba(238, 228, 218, 0.73);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #776e65;
+  font-weight: bold;
+}
+
+/* 在App.css中添加 */
+.tic-tac-toe .board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.tic-tac-toe .cell {
+  width: 80px;
+  height: 80px;
+  font-size: 36px;
+  border: 2px solid #2c3e50;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tic-tac-toe .cell:hover:not(.game-ended) {
+  background: #f0f0f0;
+}
+
+.tic-tac-toe .cell.X { color: #e74c3c; }
+.tic-tac-toe .cell.O { color: #3498db; }
+
+.reset-button {
+  padding: 10px 20px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.reset-button:hover {
+  background: #34495e;
+}
