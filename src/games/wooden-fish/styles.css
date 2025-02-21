@@ -1,0 +1,21 @@
+.wooden-fish {
+  font-size: 80px;
+  cursor: pointer;
+  transition: transform 0.1s;
+  user-select: none;
+}
+
+.wooden-fish.clicked {
+  transform: scale(0.95);
+}
+
+.coming-soon {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #7f8c8d;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
