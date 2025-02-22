@@ -1,0 +1,82 @@
+.gobang-game {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .game-info {
+    margin-bottom: 20px;
+  }
+  
+  .gobang-board {
+    display: inline-block;
+    background: #f0d9b5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gobang-row {
+    display: flex;
+  }
+  
+  .gobang-cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #8b4513;
+    background: #deb887;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+  }
+  
+  .gobang-cell:hover {
+    background: #d2b48c;
+  }
+  
+  .stone {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stone.black {
+    background: #2c3e50;
+  }
+  
+  .stone.white {
+    background: #ffffff;
+    border: 2px solid #2c3e50;
+  }
+  
+  /* 继承原有按钮样式 */
+  .reset-button {
+    padding: 10px 20px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .reset-button:hover {
+    background: #34495e;
+  }
+  
+  @media (max-width: 768px) {
+    .gobang-cell {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .stone {
+      width: 16px;
+      height: 16px;
+    }
+  }

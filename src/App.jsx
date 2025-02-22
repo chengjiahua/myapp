@@ -4,6 +4,7 @@ import WoodenFish from "./games/wooden-fish";
 import Game2048 from "./games/game-2048";
 import TicTacToe from "./games/tic-tac-toe";
 import Minesweeper from "./games/minesweeper";
+import Gobang from "./games/gobang";
 
 const App = () => {
   const [currentGame, setCurrentGame] = useState("woodenFish");
@@ -56,6 +57,14 @@ const App = () => {
           >
             扫雷
           </button>
+          <button
+            className={`menu-item ${
+              currentGame === "Gobang" ? "active" : ""
+            }`}
+            onClick={() => setCurrentGame("gobang")}
+          >
+            五子棋
+          </button>
         </div>
         <button
           className="hide-sidebar"
@@ -69,6 +78,7 @@ const App = () => {
         {currentGame === "game2048" && <Game2048 />}
         {currentGame === "ticTacToe" && <TicTacToe />}
         {currentGame === "minesweeper" && <Minesweeper />}
+        {currentGame === "gobang" && <Gobang />}
       </div>
     </div>
   );
