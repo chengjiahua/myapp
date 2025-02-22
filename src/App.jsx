@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import Leaderboard from "./games/leaderboard";
 import WoodenFish from "./games/wooden-fish";
 import Game2048 from "./games/game-2048";
 import TicTacToe from "./games/tic-tac-toe";
@@ -71,11 +70,6 @@ const App = () => {
         {currentGame === "ticTacToe" && <TicTacToe />}
         {currentGame === "minesweeper" && <Minesweeper />}
       </div>
-      {/* 新增排行榜 */}
-      {/* <div className="leaderboard-section">
-        <h3 className="section-title">🏆 排行榜</h3>
-        <Leaderboard />
-      </div> */}
     </div>
   );
 };

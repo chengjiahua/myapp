@@ -3,8 +3,13 @@
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   padding: 1rem;
-  margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* 新增定位属性 */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 260px; /* 固定宽度 */
+  z-index: 100; /* 确保在最上层 */
 }
 
 .fish-leaderboard h3 {
@@ -65,7 +70,7 @@
 
 .submit-btn {
   padding: 12px 24px;
-  margin: 15px 0;
+  margin: 15px 100px;
   background: #fff3e0;
   border: 2px solid #ffab40;
   border-radius: 25px;
