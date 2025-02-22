@@ -72,10 +72,10 @@ const App = () => {
         {currentGame === "minesweeper" && <Minesweeper />}
       </div>
       {/* 新增排行榜 */}
-      <div className="leaderboard-section">
+      {/* <div className="leaderboard-section">
         <h3 className="section-title">🏆 排行榜</h3>
         <Leaderboard />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,21 +1,94 @@
-.wooden-fish {
-  font-size: 80px;
-  cursor: pointer;
-  transition: transform 0.1s;
-  user-select: none;
+/* 木鱼排行榜样式 */
+.fish-leaderboard {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.wooden-fish.clicked {
-  transform: scale(0.95);
-}
-
-.coming-soon {
-  margin-top: 20px;
-  font-size: 24px;
-  color: #7f8c8d;
-}
-
-h2 {
+.fish-leaderboard h3 {
   color: #2c3e50;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.medal {
+  font-size: 24px;
+  margin-right: 1rem;
+}
+
+.name {
+  flex-grow: 1;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.score {
+  font-family: monospace;
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* 不同名次颜色 */
+.rank-1 .score {
+  color: #ffd700;
+}
+.rank-2 .score {
+  color: #c0c0c0;
+}
+.rank-3 .score {
+  color: #cd7f32;
+}
+
+/* 木鱼点击效果增强 */
+.wooden-fish-img {
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+}
+
+.wooden-fish-img:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  margin: 15px 0;
+  background: #fff3e0;
+  border: 2px solid #ffab40;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #ff6d00;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: #ffe0b2;
+}
+
+/* 原有排行榜样式保持统一 */
+.rank-item {
+  padding: 12px;
+  margin: 8px 0;
+  background: #fff3e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
