@@ -1,0 +1,154 @@
+.minesweeper-game {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.config-panel {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+select {
+  padding: 8px 12px;
+  border: 2px solid #2c3e50;
+  border-radius: 5px;
+  background: white;
+  font-size: 16px;
+}
+
+.new-game-btn {
+  padding: 8px 15px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.new-game-btn:hover {
+  background: #34495e;
+}
+
+.game-status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.game-state {
+  color: #e74c3c;
+}
+
+.mine-grid {
+  display: grid;
+  gap: 2px;
+  background: #bdc3c7;
+  padding: 2px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.cell:hover {
+  background: #dfe6e9;
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+.revealed {
+  background: #bdc3c7 !important;
+}
+
+.flagged {
+  background: #ffeaa7;
+}
+
+.number {
+  animation: appear 0.3s ease-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.num-1 {
+  color: #3498db;
+}
+.num-2 {
+  color: #2ecc71;
+}
+.num-3 {
+  color: #e74c3c;
+}
+.num-4 {
+  color: #9b59b6;
+}
+.num-5 {
+  color: #f1c40f;
+}
+.num-6 {
+  color: #1abc9c;
+}
+.num-7 {
+  color: #e67e22;
+}
+.num-8 {
+  color: #34495e;
+}
+
+.mine {
+  font-size: 18px;
+  animation: bomb 0.5s ease-in;
+}
+
+@keyframes bomb {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .cell {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .mine {
+    font-size: 16px;
+  }
+}

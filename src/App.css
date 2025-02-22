@@ -5,50 +5,61 @@
 }
 
 .app-container {
-  display: flex;
-  min-height: 100vh;
-  background: #f5f5f5;
+  display: flex; /* 调整布局 */
+  min-height: 100vh; /* 调整最小高度 */
+  background: #f5f5f5; /* 调整背景颜色 */
 }
 
+.show-sidebar {
+  position: fixed; /* 修正1：分号结尾 */
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000; /* 修正2：使用标准CSS属性名 */
+  padding: 10px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 0 8px 8px 0; /* 修正3：标准属性名 */
+}
 
 .logo {
-  color: #2c3e50;
-  margin-bottom: 30px;
-  text-align: center;
+  color: #2c3e50; /* 调整颜色 */
+  margin-bottom: 30px; /* 调整间距 */
+  text-align: center; /* 居中 */
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* 调整布局 */
+  flex-direction: column; /* 调整布局 控制主轴方向为垂直*/
   gap: 12px;
 }
 
 .menu-item {
-  padding: 15px;
-  border: none;
-  background: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: left;
-  transition: all 0.3s;
+  padding: 15px; /* 调整内边距 */
+  border: none; /* 移除边框 */
+  background: none; /* 移除背景 */
+  border-radius: 8px; /* 调整圆角 */
+  cursor: pointer; /* 添加指针样式 */
+  font-size: 16px; /* 调整字体大小 */
+  text-align: left; /* 调整文本对齐 */
+  transition: all 0.3s; /* 添加过渡动画 */
 }
 
 .menu-item:hover {
-  background: #f0f0f0;
+  background: #f0f0f0; /* 调整悬停背景颜色 */
 }
 
 .menu-item.active {
-  background: #3498db;
+  background: #3498db; /* 调整激活状态背景颜色 */
   color: white;
 }
 
 .main-content {
-  flex: 1;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1; /* 调整flex布局 */
+  padding: 40px; /* 调整内边距 */
+  display: flex; /* 调整布局 */
+  justify-content: center; /* 调整布局 */
+  align-items: center; /* 调整布局 */
   transition: margin-left 0.3s ease; /* 添加过渡动画 */
   margin-left: 0; /* 覆盖原有flex布局的间距 */
   position: relative;
@@ -60,47 +71,47 @@
 }
 
 .sidebar {
-  width: 240px;
-  background: white;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  width: 240px; /* 调整宽度 */
+  background: white; /* 调整背景颜色 */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  padding: 20px; /* 调整内边距 */
   position: relative; /* 新增定位 */
   transition: transform 0.3s ease; /* 添加过渡动画 */
-  z-index: 1;
+  z-index: 1; /* 确保侧边栏在最上层 */
 }
 
 /* 新增隐藏状态样式 */
 .sidebar.hidden {
-  transform: translateX(-100%);
+  transform: translateX(-100%); /* 隐藏侧边栏 */
 }
 
 /* 新增隐藏按钮样式 */
 .hide-sidebar {
-  position: fixed;
-  left: 240px;
-  bottom: 20px;
+  position: fixed; /* 固定定位 */
+  left: 240px; /* 初始位置 */
+  bottom: 20px; /* 调整位置 */
   z-index: 1000; /* 确保按钮在最上层 */
-  height: 60px;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 0 15px 15px 0;
-  cursor: pointer;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  height: 60px; /* 调整高度 */
+  background: #f0f0f0; /* 调整背景颜色 */
+  border: none; /* 移除边框 */
+  border-radius: 0 15px 15px 0; /* 调整圆角 */
+  cursor: pointer; /* 添加指针样式 */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  transition: all 0.3s ease; /* 添加过渡动画 */
 }
 
 .hide-sidebar:hover {
-  background: #e0e0e0;
+  background: #e0e0e0; /* 调整悬停背景颜色 */
 }
 
 /* 修正隐藏按钮定位 */
 .sidebar.hidden .hide-sidebar {
-  left: 0;
-  transform: rotate(180deg);
-  box-shadow: 2px 0 5px rgba(0,0,0,0.2); /* 增强阴影 */
+  left: 0; /* 调整位置 */
+  transform: rotate(180deg); /* 旋转图标 */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* 增强阴影 */
 }
 
 /* 新增展开状态样式 */
 .main-content.expanded {
-  margin-left: 0;
+  margin-left: 0; /* 调整布局 */
 }
