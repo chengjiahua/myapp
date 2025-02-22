@@ -38,6 +38,7 @@ const WoodenFish = () => {
           JSON.stringify(updated)
         );
         setLeaderboard(updated);
+        setCount(0);
       }
     } else {
       alert("当前功德不足以上榜，继续努力！");
