@@ -4,10 +4,12 @@ import Game2048 from "./game-2048";
 import TicTacToe from "./tic-tac-toe";
 import Minesweeper from "./minesweeper";
 import Gobang from "./gobang/gobang.jsx";
+import "./gameCenter.css";
 
 function GameCenter() {
   const [currentGame, setCurrentGame] = useState("woodenFish");
   const [sidebarVisible, setSidebarVisible] = useState(true);
+  const [username] = useState(localStorage.getItem("username") || "游客");
 
   return (
     <div className="app-container">
@@ -71,6 +73,9 @@ function GameCenter() {
         </button>
       </div>
       <div className={`main-content ${!sidebarVisible ? "expanded" : ""}`}>
+        {/* 新增欢迎语 */}
+        <div className="welcome-banner">欢迎您，{username}</div>
+
         {currentGame === "woodenFish" && <WoodenFish />}
         {currentGame === "game2048" && <Game2048 />}
         {currentGame === "ticTacToe" && <TicTacToe />}
